@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta  charset="utf-8">
+</head>
+<body>
+	<!-- 
+		códigos de cores:
+	 -->
+
+	<div id="container">
+		 <div id="rosto">
+		 	<img src="img/fem/pele/Branca.png" id="pele">
+		 	<img src="img/fem/olho/AzulPeleBranca.png" id="olho">
+		 	<img src="img/fem/cabelo/EnroladoCastanho.png" id="cabelo">
+		 </div>
+
+		 <div id="paleta">
+		 	<h1>Selecione as características</h1>
+
+		 	<div id="sexoSelect">
+			 	<hr>
+			 	<h2>Sexo</h2>
+			 	<input type="radio" id="masc" name="sex" onchange='setRosto("m",0,0,0)'>
+			 	<label for="masc" id="lblM">&male;</label>		
+			 	<input type="radio" id="fem" name="sex" onchange='setRosto("f",0,0,0)'>
+			 	<label for="fem" id="lblF">&female;</label>
+			</div>
+
+			<div id="peleSelect">
+				<hr>
+				<h2>Pele</h2>
+				<input type="radio" id="branco" name="cor" onchange='setRosto("",1,0,0)'>
+				<label for="branco" class="colorSelector"><div style="background-color: #ffc6a3;"></div></label>
+				<input type="radio" id="mulClaro" name="cor" onchange='setRosto("",2,0,0)'>
+				<label for="mulClaro" class="colorSelector"><div style="background-color: #e5a07c;"></div></label>				
+				<input type="radio" id="mulEscuro" name="cor" onchange='setRosto("",3,0,0)'>
+				<label for="mulEscuro" class="colorSelector"><div style="background-color: #d18f6e;"></div></label>	
+				<input type="radio" id="negro" name="cor" onchange='setRosto("",4,0,0)'>
+				<label for="negro" class="colorSelector"><div style="background-color: #9a6449;"></div></label>	
+			</div>
+
+			<div id="olhoSelect">
+				<hr>
+				<h2>Olho</h2>
+				<input type="radio" id="azul" name="olho" onchange='setRosto("",0,1,0)'>
+				<label for="azul" class="eyeSelector"><div style="background-color: #0077c0"></div></label>
+				<input type="radio" id="castanho" name="olho" onchange='setRosto("",0,2,0)'>
+				<label for="castanho" class="eyeSelector"><div style="background-color: #b24f32"></div></label>
+				<input type="radio" id="preto" name="olho" onchange='setRosto("",0,3,0)'>
+				<label for="preto" class="eyeSelector"><div style="background-color: #220903"></div></label>
+				<input type="radio" id="verde" name="olho" onchange='setRosto("",0,4,0)'>
+				<label for="verde" class="eyeSelector"><div style="background-color: #00922e"></div></label>
+			</div>
+
+			<div id="cabeloSelect">
+				<hr>
+				<h2>Cabelo</h3>
+				<table>
+					<thead>
+						<tr>
+							<th>Enrolado</th>
+							<th>Liso</th>
+							<th>Ondulado</th>
+							<th>Pixaim</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<input type="radio" name="hairColor" id="EnC" onchange='setRosto("",0,0,1)'>
+								<label class="hairSelector" for="EnC"><div style="background-color:#9b501a;"></div></label>
+							</td>
+							<td>
+								<input type="radio" name="hairColor" id="LiC" onchange='setRosto("",0,0,2)'>
+								<label class="hairSelector" for="LiC"><div style="background-color:#9b501a;"></div></label>
+							</td>
+							<td>
+								<input type="radio" name="hairColor" id="OnC" onchange='setRosto("",0,0,3)'>
+								<label class="hairSelector" for="OnC"><div style="background-color:#9b501a;"></div></label>
+							</td>
+							<td>
+								<input type="radio" name="hairColor" id="PiC" onchange='setRosto("",0,0,4)'>
+								<label class="hairSelector" for="PiC"><div style="background-color:#9b501a;"></div></label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="radio" name="hairColor" id="EnL" onchange='setRosto("",0,0,5)'>
+								<label class="hairSelector" for="EnL"><div style="background-color:#f3da52;"></div></label>
+							</td>
+							<td>
+								<input type="radio" name="hairColor" id="LiL" onchange='setRosto("",0,0,6)'>
+								<label class="hairSelector" for="LiL"><div style="background-color:#f3da52;"></div></label>
+							</td>
+							<td>
+								<input type="radio" name="hairColor" id="OnL" onchange='setRosto("",0,0,7)'>
+								<label class="hairSelector" for="OnL"><div style="background-color:#f3da52;"></div></label>
+							</td>
+							<td>
+								<input type="radio" name="hairColor" id="PiL" onchange='setRosto("",0,0,8)'>
+								<label class="hairSelector" for="PiL"><div style="background-color:#f3da52;"></div></label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="radio" name="hairColor" id="EnP" onchange='setRosto("",0,0,9)'>
+								<label class="hairSelector" for="EnP"><div style="background-color:#160702;"></div></label>
+							</td>
+							<td>
+								<input type="radio" name="hairColor" id="LiP" onchange='setRosto("",0,0,10)'>
+								<label class="hairSelector" for="LiP"><div style="background-color:#160702;"></div></label>
+							</td>
+							<td>
+								<input type="radio" name="hairColor" id="OnP" onchange='setRosto("",0,0,11)'>
+								<label class="hairSelector" for="OnP"><div style="background-color:#160702;"></div></label>
+							</td>
+							<td>
+								<input type="radio" name="hairColor" id="PiP" onchange='setRosto("",0,0,12)'>
+								<label class="hairSelector" for="PiP"><div style="background-color:#160702;"></div></label>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="radio" name="hairColor" id="EnR" onchange='setRosto("",0,0,13)'>
+								<label class="hairSelector" for="EnR"><div style="background-color:#fd6c2a"></div></label>
+							</td>
+							<td>
+								<input type="radio" name="hairColor" id="LiR" onchange='setRosto("",0,0,14)'>
+								<label class="hairSelector" for="LiR"><div style="background-color:#fd6c2a"></div></label>
+							</td>
+							<td>
+								<input type="radio" name="hairColor" id="OnR" onchange='setRosto("",0,0,15)'>
+								<label class="hairSelector" for="OnR"><div style="background-color:#fd6c2a"></div></label>
+							</td>
+							<td>
+								<input type="radio" name="hairColor" id="PiR" onchange='setRosto("",0,0,16)'>
+								<label class="hairSelector" for="PiR"><div style="background-color:#fd6c2a"></div></label>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		 	<hr>
+		 </div>
+	</div>
+
+ 	 <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
